@@ -69,286 +69,218 @@ function App() {
           </span>
 
 
-          {/* =========================
-              RED LAMBORGHINI STYLE CAR
-             ========================= */}
+        
+        {/* DELIVERY TRUCK */}
 
-          {status === "delivery" && (
-            <svg
-              className="delivery-car"
-              viewBox="0 0 320 150"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+{status === "delivery" && (
+  <svg
+    className="delivery-car"
+    viewBox="0 0 360 150"
+    xmlns="http://www.w3.org/2000/svg"
+  >
 
-              {/* CAR SHADOW */}
+    {/* SHADOW */}
+    <ellipse
+      cx="175"
+      cy="132"
+      rx="145"
+      ry="9"
+      fill="rgba(0,0,0,0.7)"
+    />
 
-              <ellipse
-                cx="160"
-                cy="128"
-                rx="125"
-                ry="10"
-                fill="rgba(0,0,0,0.7)"
-              />
+    {/* TRUCK BODY */}
+    <rect
+      x="35"
+      y="48"
+      width="205"
+      height="70"
+      rx="5"
+      fill="#f7df08"
+      stroke="#f1e20c"
+      strokeWidth="4"
+    />
 
+    {/* TRUCK CAB */}
+    <path
+      d="
+        M240 65
+        L285 65
+        L325 88
+        L335 118
+        L240 118
+        Z
+      "
+      fill="#f7df08"
+      stroke="#f1e20c"
+      strokeWidth="4"
+    />
 
-              {/* MAIN BODY */}
+    {/* CARGO BOX */}
+    <rect
+      x="48"
+      y="55"
+      width="175"
+      height="55"
+      rx="3"
+      fill="#ffffff"
+      stroke="#d8d8d8"
+      strokeWidth="2"
+    />
 
-              <path
-                d="
-                  M25 105
-                  L40 88
-                  L78 80
-                  L112 45
-                  L175 35
-                  L220 45
-                  L255 72
-                  L290 84
-                  L300 104
-                  L292 119
-                  L25 119
-                  Z
-                "
-                fill="#f7df08"
-                stroke="#f1e20c"
-                strokeWidth="4"
-              />
+    {/* CARGO BOX LINE */}
+    <line
+      x1="135"
+      y1="55"
+      x2="135"
+      y2="110"
+      stroke="#dddddd"
+      strokeWidth="2"
+    />
 
+    {/* DELIVERY TEXT */}
+    <text
+      x="136"
+      y="88"
+      textAnchor="middle"
+      fill="#ff1744"
+      fontSize="15"
+      fontWeight="bold"
+      fontFamily="Arial"
+    >
+      DELIVERY
+    </text>
 
-              {/* ROOF */}
+    {/* CAB WINDOW */}
+    <path
+      d="
+        M247 70
+        L280 70
+        L308 89
+        L247 89
+        Z
+      "
+      fill="#071018"
+      stroke="#555"
+      strokeWidth="2"
+    />
 
-              <path
-                d="
-                  M82 79
-                  L115 45
-                  L174 37
-                  L215 47
-                  L248 73
-                  L225 79
-                  Z
-                "
-                fill="#171717"
-                stroke="#ff506b"
-                strokeWidth="3"
-              />
+    {/* WINDOW HIGHLIGHT */}
+    <path
+      d="
+        M253 74
+        L276 74
+        L294 85
+      "
+      fill="none"
+      stroke="#6c8795"
+      strokeWidth="2"
+      opacity="0.7"
+    />
 
+    {/* FRONT GRILL */}
+    <path
+      d="
+        M319 91
+        L335 96
+        L331 113
+        L315 113
+        Z
+      "
+      fill="#111111"
+    />
 
-              {/* WINDSHIELD */}
+    {/* HEADLIGHT */}
+    <path
+      d="
+        M310 87
+        L327 91
+        L319 98
+        L304 95
+        Z
+      "
+      fill="#ffffff"
+    />
 
-              <path
-                d="
-                  M119 48
-                  L171 41
-                  L163 73
-                  L94 73
-                  Z
-                "
-                fill="#071018"
-                stroke="#555"
-                strokeWidth="2"
-              />
+    {/* RED REAR LIGHT */}
+    <rect
+      x="32"
+      y="88"
+      width="8"
+      height="14"
+      rx="2"
+      fill="#ff0033"
+    />
 
+    {/* SIDE BODY LINE */}
+    <line
+      x1="40"
+      y1="112"
+      x2="330"
+      y2="112"
+      stroke="#ff4560"
+      strokeWidth="3"
+    />
 
-              {/* SIDE WINDOW */}
+    {/* FRONT BUMPER */}
+    <rect
+      x="318"
+      y="112"
+      width="20"
+      height="8"
+      rx="2"
+      fill="#111111"
+    />
 
-              <path
-                d="
-                  M176 42
-                  L210 51
-                  L238 72
-                  L170 72
-                  Z
-                "
-                fill="#071018"
-                stroke="#555"
-                strokeWidth="2"
-              />
+    {/* WHEEL 1 */}
+    <circle
+      cx="95"
+      cy="118"
+      r="24"
+      fill="#050505"
+      stroke="#303030"
+      strokeWidth="5"
+    />
 
+    <circle
+      cx="95"
+      cy="118"
+      r="12"
+      fill="#777"
+    />
 
-              {/* WINDOW HIGHLIGHT */}
+    <circle
+      cx="95"
+      cy="118"
+      r="5"
+      fill="#222"
+    />
 
-              <path
-                d="
-                  M183 48
-                  L207 55
-                  L218 64
-                "
-                fill="none"
-                stroke="#6c8795"
-                strokeWidth="2"
-                opacity="0.7"
-              />
+    {/* WHEEL 2 */}
+    <circle
+      cx="275"
+      cy="118"
+      r="24"
+      fill="#050505"
+      stroke="#303030"
+      strokeWidth="5"
+    />
 
+    <circle
+      cx="275"
+      cy="118"
+      r="12"
+      fill="#777"
+    />
 
-              {/* SIDE BODY LINE */}
+    <circle
+      cx="275"
+      cy="118"
+      r="5"
+      fill="#222"
+    />
 
-              <path
-                d="
-                  M42 94
-                  L273 91
-                "
-                fill="none"
-                stroke="#ff7184"
-                strokeWidth="3"
-              />
-
-
-              {/* DOOR */}
-
-              <path
-                d="
-                  M166 76
-                  L169 108
-                  L224 106
-                  L230 78
-                "
-                fill="none"
-                stroke="#b80025"
-                strokeWidth="2"
-              />
-
-
-              {/* DOOR HANDLE */}
-
-              <rect
-                x="190"
-                y="82"
-                width="19"
-                height="3"
-                rx="2"
-                fill="#ff8796"
-              />
-
-
-              {/* SIDE AIR INTAKE */}
-
-              <path
-                d="
-                  M218 88
-                  L257 78
-                  L247 102
-                  L219 104
-                  Z
-                "
-                fill="#080808"
-              />
-
-
-              {/* FRONT BUMPER */}
-
-              <path
-                d="
-                  M273 92
-                  L300 97
-                  L292 116
-                  L270 116
-                  Z
-                "
-                fill="#0a0a0a"
-              />
-
-
-              {/* HEADLIGHT */}
-
-              <path
-                d="
-                  M263 78
-                  L285 85
-                  L273 91
-                  L253 87
-                  Z
-                "
-                fill="#ffffff"
-              />
-
-              <path
-                d="
-                  M260 81
-                  L281 86
-                "
-                stroke="#b9f5ff"
-                strokeWidth="3"
-              />
-
-
-              {/* REAR LIGHT */}
-
-              <path
-                d="
-                  M38 85
-                  L59 81
-                  L54 94
-                  L34 96
-                  Z
-                "
-                fill="#ff0033"
-              />
-
-
-              {/* WHEEL 1 */}
-
-              <circle
-                cx="82"
-                cy="112"
-                r="25"
-                fill="#050505"
-                stroke="#303030"
-                strokeWidth="5"
-              />
-
-              <circle
-                cx="82"
-                cy="112"
-                r="13"
-                fill="#777"
-              />
-
-              <circle
-                cx="82"
-                cy="112"
-                r="6"
-                fill="#222"
-              />
-
-
-              {/* WHEEL 2 */}
-
-              <circle
-                cx="247"
-                cy="112"
-                r="25"
-                fill="#050505"
-                stroke="#303030"
-                strokeWidth="5"
-              />
-
-              <circle
-                cx="247"
-                cy="112"
-                r="13"
-                fill="#777"
-              />
-
-              <circle
-                cx="247"
-                cy="112"
-                r="6"
-                fill="#222"
-              />
-
-
-              {/* LOWER BODY */}
-
-              <path
-                d="
-                  M28 108
-                  L300 108
-                "
-                stroke="#ff4560"
-                strokeWidth="3"
-              />
-
-            </svg>
-          )}
+  </svg>
+)}
 
 
           {/* SUCCESS ICON */}
